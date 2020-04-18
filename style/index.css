@@ -49,11 +49,13 @@ table {
 
 * {
     box-sizing: border-box;
+
 }
 
 html, body {
     height: 100%;
     font-family: 'Roboto', sans-serif;
+    background-color: black;
 }
 
 h1, h2, h3, h4, h5 {
@@ -68,9 +70,44 @@ p {
 
 .container {
     width: 800px;
-    margin: 0 auto;
-}
+    margin: 0 auto;    
+    background-color:white;
+     }
+     .container header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 20px 0;
+    }  
+                  
+      header nav.top-nav {
+          display: flex;
+          justify-content: space-around;
+      }
+      
+      header nav.top-nav a {
+          padding: 0 40px;
+          color: black;
+          text-decoration: none;
+      }
+      
+      header nav.top-nav a:hover {
+          color: grey;
+           }
+           @media screen and (max-width: 800px) {
+            header nav.top-nav a {
+             display: flex;
+             flex-direction:column;
+             justify-content:center
+              }
+               }    
 
+        @media screen and (max-width: 500px) {
+        .jumbo {
+            width: 65%;
+            height: auto;;  
+        }
+    } 
 .top-content {
     display: flex;
     flex-wrap: wrap;
@@ -84,7 +121,13 @@ p {
     padding: 0 1%;
     padding-bottom: 20px;  
 }
-
+@media screen and (max-width: 800px) {
+    .top-content {
+     display: flex;
+     flex-direction:column;
+     justify-content:center
+      }
+       }    
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
@@ -104,14 +147,50 @@ p {
 .middle-content .boxes .box {
     width: 12.5%;
     height: 100px;
-    background: black;
+    background:  black;
     margin: 20px 2.5%;
     color: white;
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
+}
+ div .boxes .box:nth-child(1) {
+    background: teal;
+     }
+     div .boxes .box:nth-child(2) {
+        background: gold;
+     } 
+     div .boxes .box:nth-child(3) {
+        background: cadetblue;
+     } 
+     div .boxes .box:nth-child(4) {
+        background: coral;
+     } 
+     div .boxes .box:nth-child(5) {
+        background: crimson;
+     } 
+     div .boxes .box:nth-child(6) {
+        background: forestgreen;
+     } 
+     div .boxes .box:nth-child(7) {
+        background: darkorchid;
+     } 
+     div .boxes .box:nth-child(8) {
+        background: hotpink;
+     } 
+     div .boxes .box:nth-child(9) {
+        background: indigo;
+     } 
+     div .boxes .box:nth-child(10) {
+        background: dodgerblue;
+     } 
+  @media screen and (max-width: 500px) {
+	.middle-content .boxes {
+	  display: flex;
+	  flex-direction:column;
+	}
+  }
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -125,6 +204,14 @@ p {
 .bottom-content .text-container:last-child {
     padding-right: 0;
 }
+
+@media screen and (max-width: 800px) {
+    .bottom-content {
+     display: flex;
+     flex-direction:column;
+     justify-content:center;
+      }
+       }    
 
 footer {
     width: 100%;
